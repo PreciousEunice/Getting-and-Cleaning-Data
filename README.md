@@ -17,7 +17,7 @@ It describes the variables, the data, and any transformations or work performed 
 This R script downloads the data followed by the 5 steps stated in the course project’s instructions:
 1) Downloads and reads the data set.
 - The dataset is downloaded and extracted as folder named UCI HAR Dataset.  The files contained in the dataset are assigned the following names:
-** 'features' <- "features.txt"
+**'features' <- "features.txt"
 - 'activities' <- "activity_labels.txt"
 - 'subject_test' <- "subject_test.txt"
 - 'x_test' <- "X_test.txt"
