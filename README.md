@@ -16,7 +16,7 @@ It describes the variables, the data, and any transformations or work performed 
 ### 2.  run_analysis.R 
 This R script downloads the data followed by the 5 steps stated in the course project’s instructions:
 1) Downloads and reads the data set.
-The dataset is downloaded and extracted as folder named UCI HAR Dataset.  The files contained in the dataset are assigned the following names:
+- The dataset is downloaded and extracted as folder named UCI HAR Dataset.  The files contained in the dataset are assigned the following names:
 - 'features' <- "features.txt"
 - 'activities' <- "activity_labels.txt"
 - 'subject_test' <- "subject_test.txt"
@@ -27,23 +27,23 @@ The dataset is downloaded and extracted as folder named UCI HAR Dataset.  The fi
 - 'y_train' <- "y_train.txt"
 
 2) Merges the training and the test sets to create one data set.
-The following dataframes were created using rbind() function
+- The following dataframes were created using rbind() function
 - 'subject' is created by merging 'subject_train' and 'subject_test' 
 - 'x' is created by merging 'x_train' and x_test' 
 - 'y' is created by merging 'y_train' and 'y_test' 
-Using cbind() function, 'subject', 'y' and 'x' were merged creating 'merged_data'.
+- Using cbind() function, 'subject', 'y' and 'x' were merged creating 'merged_data'.
 
 3) Extracts only the measurements on the mean and standard deviation for each measurement.
-Using select() function, the following columns were extracted from 'merged_data: 'subject', 'code' and the 'columns' containing the mean and standard deviation (std) for each measurement.  This subset is assigned a name 'tidy_data'. 
+- Using select() function, the following columns were extracted from 'merged_data: 'subject', 'code' and the 'columns' containing the mean and standard deviation (std) for each measurement.  This subset is assigned a name 'tidy_data'. 
 
 4) Uses descriptive activity names to name the activities in the data set.
-The 'code' column of the 'tidy_data' is replaced with corresponding descriptive activity names taken from second column of the 'activities' dataframe.
+- The 'code' column of the 'tidy_data' is replaced with corresponding descriptive activity names taken from second column of the 'activities' dataframe.
 
 5) Appropriately labels the data set with descriptive variable names.
-Renaming of variable and character string replacement were done to appropriately label the 'tidy_data' data set with descriptive variable names.
+- Renaming of variable and character string replacement were done to appropriately label the 'tidy_data' data set with descriptive variable names.
 
 6) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-A second tidy data set, 'final_dataset', is created by grouping the data according to 'subject' and 'Activity', then summarizing the data set as means of each variable.  The 'final_dataset' is exported as 'final_dataset.txt' file. 
+- A second tidy data set, 'final_dataset', is created by grouping the data according to 'subject' and 'Activity', then summarizing the data set as means of each variable.  The 'final_dataset' is exported as 'final_dataset.txt' file. 
 
 ## References:
 Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
