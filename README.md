@@ -29,8 +29,8 @@ The dataset is downloaded and extracted as folder named UCI HAR Dataset.  The fi
 2) Merges the training and the test sets to create one data set.
 The following dataframes were created using rbind() function
 - 'subject' is created by merging 'subject_train' and 'subject_test' 
--'x' is created by merging 'x_train' and x_test' 
--'y' is created by merging 'y_train' and 'y_test' 
+- 'x' is created by merging 'x_train' and x_test' 
+- 'y' is created by merging 'y_train' and 'y_test' 
 Using cbind() function, 'subject', 'y' and 'x' were merged creating 'merged_data'.
 
 3) Extracts only the measurements on the mean and standard deviation for each measurement.
