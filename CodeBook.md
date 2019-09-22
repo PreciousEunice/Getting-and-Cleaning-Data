@@ -49,7 +49,7 @@ The following files are available for the train and test data.
 
 The `run_analysis.R` script performs the following transformations or work to clean up the data:
 
-###1. Download and read the dataset.
+### 1. Download and read the dataset.
 The dataset is downloaded and extracted as folder named UCI HAR Dataset.  The files contained in the dataset are assigned the following names:
 - features <- "features.txt"; 561 rows, 2 columns
 The following part is lifted from the the features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
@@ -128,20 +128,20 @@ This contains the recorded features among the train subjects.
 - 'y_train' <- "y_train.txt":  7352 rows, 1 columns
 This contains the code of the activities performed while the measurements were taken.
      
-###2. Merges the training and the test sets to create one single data set.
+### 2. Merges the training and the test sets to create one single data set.
 The following dataframes were created.
 -'subject' (10299 rows, 1 column) is created by merging 'subject_train' and 'subject_test' using rbind() function.
 -'x' (10299 rows, 561 columns) is created by merging 'x_train' and x_test' using rbind() function.
 -'y' (10299 rows, 1 column) is created by merging 'y_train' and 'y_test' using rbind() function.
 -'merged_data' (10299 rows, 563 column) is created by merging 'subject', 'y' and 'x' using cbind() function.
 
-###3. Extracts only the measurements on the mean and standard deviation for each measurement. 
+### 3. Extracts only the measurements on the mean and standard deviation for each measurement. 
 tidy_data (10299 rows, 88 columns) is created by subsetting merged_data, selecting the following columns: 'subject', 'code' and the 'columns' containing the mean and standard deviation (std) for each measurement.
 
-###4. Uses descriptive activity names to name the activities in the data set
+### 4. Uses descriptive activity names to name the activities in the data set
 The 'code' column of the 'tidy_data' is replaced with corresponding descriptive activity names taken from second column of the 'activities' dataframe.
 
-###5. Appropriately labels the data set with descriptive variable names. 
+### 5. Appropriately labels the data set with descriptive variable names. 
 The following changes were done to appropriately label the 'tidy_data' data set with descriptive variable names.
 - 'code' column is renamed 'Activity'.
 - All "t" at the start of the variable name is replaced with "Time ".
