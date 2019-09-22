@@ -16,21 +16,19 @@ It describes the variables, the data, and any transformations or work performed 
 ### 2.  run_analysis.R 
 This R script downloads the data followed by the 5 steps stated in the course project’s instructions:
 1) Downloads and reads the data set.
-- The dataset is downloaded and extracted as folder named UCI HAR Dataset.  The files contained in the dataset are assigned the following names:
-**'features' <- "features.txt"
-- 'activities' <- "activity_labels.txt"
-- 'subject_test' <- "subject_test.txt"
-- 'x_test' <- "X_test.txt"
-- 'y_test' <- "y_test.txt"
-- 'subject_train' <- "subject_train.txt"
-- 'x_train' <- "X_train.txt"
-- 'y_train' <- "y_train.txt"
+- The dataset is downloaded and extracted as folder named UCI HAR Dataset.  The files contained in the dataset are assigned the following names: 'features' <- "features.txt";
+'activities' <- "activity_labels.txt";
+'subject_test' <- "subject_test.txt";
+'x_test' <- "X_test.txt";
+'y_test' <- "y_test.txt";
+'subject_train' <- "subject_train.txt";
+'x_train' <- "X_train.txt";
+'y_train' <- "y_train.txt";
 
 2) Merges the training and the test sets to create one data set.
-- The following dataframes were created using rbind() function
-- 'subject' is created by merging 'subject_train' and 'subject_test' 
-- 'x' is created by merging 'x_train' and x_test' 
-- 'y' is created by merging 'y_train' and 'y_test' 
+- The following dataframes were created using rbind() function:  'subject' is created by merging 'subject_train' and 'subject_test';
+'x' is created by merging 'x_train' and x_test';
+'y' is created by merging 'y_train' and 'y_test';
 - Using cbind() function, 'subject', 'y' and 'x' were merged creating 'merged_data'.
 
 3) Extracts only the measurements on the mean and standard deviation for each measurement.
