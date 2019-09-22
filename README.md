@@ -1,19 +1,19 @@
 # Getting-and-Cleaning-Data
 
-##Peer-graded Assignment: Getting and Cleaning Data Course Project
+## Peer-graded Assignment: Getting and Cleaning Data Course Project
 This repository is a course project for the Getting and Cleaning Data Course. It contains the instructions on how to run analysis on Human Activity recognition dataset.
 
-##R Version
+## R Version
 "R version 3.5.1 (2018-07-02)"
 
-##Dataset
+## Dataset
 Human Activity Recognition Using Smartphones
 
-##Files
-###1.  CodeBook.md 
+## Files
+### 1.  CodeBook.md 
 It describes the variables, the data, and any transformations or work performed to clean up the data.
 
-###2.  run_analysis.R 
+### 2.  run_analysis.R 
 This R script downloads the data followed by the 5 steps stated in the course project’s instructions:
 -1. Merges the training and the test sets to create one data set.
 -2. Extracts only the measurements on the mean and standard deviation for each measurement.
